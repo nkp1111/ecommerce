@@ -29,17 +29,20 @@
 - add heroBanner component
 - add product component
 - add footerBanner component
+- add layout component
 
 ## Built with
 
 - [Sanity](https://www.sanity.io/)
 - [React](https://react.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
+- [Next](https://nextjs.org)
 
 ## Resources
 
 - react-icons
 - react-router-dom
+- @sanity/client
+- @sanity/image-url
 
 ## Acknowledgement
 
