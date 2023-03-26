@@ -28,6 +28,7 @@
 - connected to the sanity client to get product and banner data
 - add heroBanner component
 - add product component
+- add footerBanner component
 
 ## Built with
 
