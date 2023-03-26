@@ -30,6 +30,8 @@
 - add product component
 - add footerBanner component
 - add layout component
+- add product directory for rendering different products on one template
+- add stateContext file
 
 ## Built with
 
@@ -43,6 +45,7 @@
 - react-router-dom
 - @sanity/client
 - @sanity/image-url
+- react-hot-toast
 
 ## Acknowledgement
 
