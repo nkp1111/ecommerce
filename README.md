@@ -23,7 +23,7 @@
 
 ## Steps completed
 
-- add sanity directory as sanity-ecommerce for schema
+- add sanity directory as sanity_ecommerce for schema
 
 ## Built with
 
