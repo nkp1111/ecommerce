@@ -24,6 +24,7 @@
 ## Steps completed
 
 - add sanity directory as sanity_ecommerce for schema
+- add product and banner schema
 
 ## Built with
 
