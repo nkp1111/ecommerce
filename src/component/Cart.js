@@ -9,7 +9,7 @@ import { useStateContext } from '../../context/StateContext'
 
 const Cart = () => {
   const cartRef = useRef()
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity } = useStateContext()
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext()
 
   return (
     <div className='cart-wrapper' ref={cartRef}>
@@ -65,7 +65,7 @@ const Cart = () => {
                   </div>
                   <button type="button"
                     className='remove-item'
-                    onClick="">
+                    onClick={() => onRemove(item._id)}>
                     <TiDeleteOutline />
                   </button>
                 </div>

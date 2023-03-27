@@ -35,6 +35,7 @@
 - change item quantity
 - update items on cart
 - add cart component dynamically
+- update cart item quantity and remove item
 
 ## Built with
 
