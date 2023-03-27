@@ -34,6 +34,7 @@
 - add stateContext file
 - change item quantity
 - update items on cart
+- add cart component dynamically
 
 ## Built with
 
