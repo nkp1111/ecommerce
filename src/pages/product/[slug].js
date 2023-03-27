@@ -9,7 +9,9 @@ import Product from '../../component/Product'
 import { useStateContext } from '../../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
+
   const { image, name, details, price } = product
+
   const [index, setIndex] = useState(0);
   const { incQty, decQty, qty, onAdd, setShowCart } = useStateContext()
 
@@ -24,8 +26,10 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <div className='image-container'>
             {/* main product image  */}
-            <img src={urlFor(image && image[index])}
-              className="product-detail-image" />
+            {image && (
+              <img src={urlFor(image[index])}
+                className="product-detail-image" />
+            )}
           </div>
           <div className="small-images-container">
             {/* additional product images  */}
