@@ -36,6 +36,9 @@
 - update items on cart
 - add cart component dynamically
 - update cart item quantity and remove item
+- add stripe backend route
+- send cart items data to stripe for checkout
+- add stripe success page and canvas-confetti for style
 
 ## Built with
 
@@ -50,6 +53,8 @@
 - @sanity/client
 - @sanity/image-url
 - react-hot-toast
+- stripe
+- @stripe/stripe-js
 
 ## Acknowledgement
 
