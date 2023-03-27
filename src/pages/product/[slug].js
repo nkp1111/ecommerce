@@ -6,10 +6,12 @@ import {
 
 import { client, urlFor } from "../../../lib/client"
 import Product from '../../component/Product'
+import { useStateContext } from '../../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product
   const [index, setIndex] = useState(0);
+  const { incQty, decQty, qty } = useStateContext()
 
   return (
     <div>
@@ -54,14 +56,14 @@ const ProductDetails = ({ product, products }) => {
             <h3>Quantity:</h3>
             <p className="quantity-desc">
               <span className="minus"
-                onClick="">
+                onClick={decQty}>
                 <AiOutlineMinus />
               </span>
               <span className='num'>
-                {0}
+                {qty}
               </span>
               <span className="plus"
-                onClick="">
+                onClick={incQty}>
                 <AiOutlinePlus />
               </span>
             </p>
@@ -119,8 +121,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   const product = await client.fetch(query)
   const products = await client.fetch(productsQuery)
-
-  console.log(product)
 
   return { props: { products, product } }
 }
