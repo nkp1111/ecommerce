@@ -33,6 +33,7 @@
 - add product directory for rendering different products on one template
 - add stateContext file
 - change item quantity
+- update items on cart
 
 ## Built with
 

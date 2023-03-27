@@ -11,17 +11,19 @@ import { useStateContext } from '../../../context/StateContext'
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product
   const [index, setIndex] = useState(0);
-  const { incQty, decQty, qty } = useStateContext()
+  const { incQty, decQty, qty, onAdd } = useStateContext()
 
   return (
     <div>
       <div className="product-detail-container">
         <div>
           <div className='image-container'>
+            {/* main product image  */}
             <img src={urlFor(image && image[index])}
               className="product-detail-image" />
           </div>
           <div className="small-images-container">
+            {/* additional product images  */}
             {image?.map((item, ind) => (
               <img
                 key={ind}
@@ -68,10 +70,11 @@ const ProductDetails = ({ product, products }) => {
               </span>
             </p>
           </div>
+          {/* add to cart and buy now button  */}
           <div className="buttons">
             <button type="button"
               className="add-to-cart"
-              onClick="">
+              onClick={() => onAdd(product, qty)}>
               Add to Cart
             </button>
             <button type="button"
@@ -83,6 +86,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
       </div>
 
+      {/* recommended products */}
       <div className="maylike-products-wrapper">
         <h2>You may also like</h2>
         <div className="marquee">
@@ -93,7 +97,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
