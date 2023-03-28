@@ -1,6 +1,6 @@
 # E-commerce project
 
-- E-commerce project built with next, sanity, react
+- E-commerce project built with next, sanity, react and stripe for allowing real time payment.
 
 ## Table of contents
 
@@ -15,11 +15,11 @@
 ## Links
 
 - [Solution](https://github.com/nkp1111/ecommerce)
-- [Live app]()
+- [Live app](https://ecommerce-chi-self.vercel.app/)
 
 ## Image
 
-![image]()
+![image](./public/assets/screencapture-ecommerce-chi-self-vercel-app-2023-03-28-10_25_37.png)
 
 ## Steps completed
 
@@ -39,12 +39,14 @@
 - add stripe backend route
 - send cart items data to stripe for checkout
 - add stripe success page and canvas-confetti for style
+- launch app on vercel
 
 ## Built with
 
 - [Sanity](https://www.sanity.io/)
 - [React](https://react.dev/)
 - [Next](https://nextjs.org)
+- [Stripe](https://stripe.com/)
 
 ## Resources
 
@@ -64,4 +66,4 @@
 ## Author
 
 - Name - Neeraj Parmar
-- Twitter - @nkp11111507
+- Twitter - [@nkp11111507](https://twitter.com/@nkp11111507)
