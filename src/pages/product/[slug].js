@@ -10,8 +10,6 @@ import { useStateContext } from '../../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
 
-  const { image, name, details, price } = product
-
   const [index, setIndex] = useState(0);
   const { incQty, decQty, qty, onAdd, setShowCart } = useStateContext()
 
@@ -26,14 +24,14 @@ const ProductDetails = ({ product, products }) => {
         <div>
           <div className='image-container'>
             {/* main product image  */}
-            {image && (
-              <img src={urlFor(image[index])}
+            {product?.image?.length > 0 && (
+              <img src={urlFor(product.image[index])}
                 className="product-detail-image" />
             )}
           </div>
           <div className="small-images-container">
             {/* additional product images  */}
-            {image?.map((item, ind) => (
+            {product?.image?.map((item, ind) => (
               <img
                 key={ind}
                 src={urlFor(item)}
@@ -46,7 +44,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
 
         <div className="product-detail-desc">
-          <h1>{name}</h1>
+          <h1>{product?.name}</h1>
           {/* star review  */}
           <div className="reviews">
             <div>
@@ -60,8 +58,8 @@ const ProductDetails = ({ product, products }) => {
             <p>{20}</p>
           </div>
           <h4>Details: </h4>
-          <p>{details}</p>
-          <p className='price'>${price}</p>
+          <p>{product?.details}</p>
+          <p className='price'>${product?.price}</p>
           {/* quantity  */}
           <div className="quantity">
             <h3>Quantity:</h3>
@@ -100,7 +98,7 @@ const ProductDetails = ({ product, products }) => {
         <h2>You may also like</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
-            {products.map((item, ind) => (
+            {products?.map((item, ind) => (
               <Product key={item._id} product={item} />
             ))}
           </div>
